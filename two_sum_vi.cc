@@ -29,8 +29,8 @@ public:
 	void dfs(TreeNode *root, vector<int> &arr)
 	{
 		if(root == NULL) return;
-		dfs(root->left);
+		dfs(root->left, arr);
 		arr.push_back(root->val);
-		dfs(root->right);
+		dfs(root->right, arr);
 	}
 };
