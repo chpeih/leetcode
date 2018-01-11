@@ -30,8 +30,8 @@ class Solution {
 							{
 								int xx = x + dx[k];
 								int yy = y + dy[k];
-								if(xx < 0 || xx > n) continue;
-								if(yy < 0 || yy > m) continue;
+								if(xx < 0 || xx >= n) continue;
+								if(yy < 0 || yy >= m) continue;
 								if(grid[xx][yy]	== 1 && visit.find(xx*m+yy) == visit.end())
 								{
 									qe.push(xx*m+yy);
