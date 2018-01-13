@@ -2,7 +2,7 @@
 struct cmp{
 	bool operator()(ListNode *a, ListNode *b)
 	{
-		return a->val < b.val;
+		return a->val > b->val;
 	}
 }
 
