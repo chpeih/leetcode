@@ -24,11 +24,18 @@ public:
 			int k2 = nums2[st2];
 			return k1<k2?k1:k2;
 		}
+
 		int m1 = k/2;
 		if(m1>ed1-st1+1){
 			m1 = ed1-st1+1;
 		}
 		int m2 = k - m1;
+		if(m2>st2-ed2+1)
+		{
+			m2 = st2-ed2+1;
+			m1 = k - m2;
+		}
+
 		int v1 = nums1[st1+m1-1];
 		int v2 = nums2[st2+m2-1];
 		if(v1<v2){
