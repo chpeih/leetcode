@@ -30,9 +30,9 @@ public:
 			m1 = ed1-st1+1;
 		}
 		int m2 = k - m1;
-		if(m2>st2-ed2+1)
+		if(m2>ed2-st2+1)
 		{
-			m2 = st2-ed2+1;
+			m2 = ed2-st2+1;
 			m1 = k - m2;
 		}
 
