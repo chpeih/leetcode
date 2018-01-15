@@ -16,6 +16,7 @@ class Solution {
 		{
 			if(maxn>i){
 				dp[i] = dp[2*maxl-i];
+				if(dp[i]+i>maxn)dp[i] = maxn-i;
 			}
 			while(i+dp[i]+1<nlen && i-dp[i]-1>=0 && news[i+dp[i]+1] == news[i-dp[i]-1])
 			{
@@ -39,7 +40,7 @@ class Solution {
 		}	
 
 		string ans;
-		for(int i = c-dp[i];i<=c+dp[i];i++)
+		for(int i = c-dp[c];i<=c+dp[c];i++)
 		{
 			if(news[i]=='#')continue;
 			ans.push_back(news[i]);
