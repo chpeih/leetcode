@@ -3,7 +3,7 @@
 class Solution {
 public:
 	double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-		int num = nums1.size(), num2 = nums2.size();
+		int num = nums1.size() + nums2.size();
 		if(num == 0) return 0;
 		if(num%2){
 			return find(nums1, 0, nums2, 0, (num+1)/2);
